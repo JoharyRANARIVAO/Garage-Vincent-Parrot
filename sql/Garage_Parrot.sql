@@ -83,7 +83,7 @@ INSERT INTO `users` (`user_id`, `full_name`, `email`, `password`, `admin`, `age`
 INSERT INTO `users` (`user_id`, `full_name`, `email`, `password`, `admin`, `age`) VALUES
 (2, 'Jean Dupont', 'Jean.Dupont@exemple.com', 'Turbo2024', 0, 24);
 INSERT INTO `users` (`user_id`, `full_name`, `email`, `password`, `admin`, `age`) VALUES
-( 3,'Anne Joel', 'Anne.joel@exemple.com', 'TopGear2001', 1, 18);
+( 3,'Anne Joel', 'Anne.joel@exemple.com', 'TopGear2001', 0, 18);
 --
 -- Index pour les tables déchargées
 UPDATE `users` SET `admin` = 0 WHERE `admin` IS NULL;
