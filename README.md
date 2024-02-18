@@ -27,8 +27,8 @@ Dans XAMPP Control, assurez-vous que MySQL est démarré.
 Ouvrez un navigateur et accédez à http://localhost/phpmyadmin.
 Vous pouvez maintenant créer une nouvelle base de données: `Garage_Parrot`, importer une base de données existante, etc.
 
-Créer une Base de données et ensuite vous pouvez utiliser les codes sql qui se trouve dans le dossier SQL de mon github
-![capture d'ecran de mon vs code ou se trouve le dossier SQL](<img width="191" alt="Capture d’écran 2024-02-18 à 22 22 16" src="https://github.com/JoharyRANARIVAO/Garage-Vincent-Parrot/assets/126516353/388eb981-6132-475a-b97d-4f0d2c36328f">)
+Créer une Base de données et ensuite vous pouvez utiliser les codes sql qui se trouve dans le dossier SQL de mon github:
+!
 Création de la base de données et utilisation des scripts SQL :
 
 Création de la base de données :
