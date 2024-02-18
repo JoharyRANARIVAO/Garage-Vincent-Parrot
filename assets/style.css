@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: #F2F7EF;
+    font-family: "Assistant", sans-serif;
+    font-size: 2rem;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+nav{
+    background-color: #D92332;
+    color:#FFFFFF;
+    
+}
+.navbar-nav .nav-link:hover {
+    color: #ffffff; 
+}
+
+
+
+article{
+    background-color: aquamarine;
+}
+.card{
+    -webkit-box-shadow: 0px 2px 18px 8px #F2F7EF ; 
+box-shadow: 0px 2px 18px 8px #F2F7EF;
+
+}
+.card-img-top {
+   height: 
+   300px;
+    object-fit: cover;
+    width: 100%;
+    
+}
+img{
+    border-radius: 10px;
+    }
+
+    .main-container {
+        margin-bottom: 100px; /* Ajout de marge basse pour éviter le recouvrement par le footer */
+    }
+  
+    html{
+        font-size: 62.5%;/* 1rem = 10px*/
+    }
+  
+    .banniere{
+        background-color:lightgray ;/*nouvelle couleur de fond*/
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;/*A ajouter*/
+    }
+    .body-change{
+        background-color: #464d5ba1;
+        color: rgb(64, 64, 64);
+    }
+    .banniere-titre{
+        margin-bottom: 1rem;
+    }
+    .switch-box{
+        width: 90px;
+        height: 30px;
+        background-color: #1E2939;
+        border-radius: 15px;
+        position: relative;/*Permet de positionner l'icône en absolute*/
+        border: 1px solid #1E2939;
+        padding: 1rem;
+    }
+    .switch-change{
+        background-color: #61b3ff;
+        border: 1px solid #61b3ff;
+    }
+    .btnDark{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;/*par rapport à la DIV switch*/
+        top: -1px;/*évite un décalage de 1px*/
+        left: -1px;/*évite un décalage de 1px*/
+    }
+    .switch-box i{
+        position: absolute;/*par rapport à la DIV switch*/
+        color: #FFD363;
+        top: 6px;
+        right: 23px;
+    }
+    .btnDark-change{
+        right: -1px;
+        left: auto;/*nécessaire pour ne pas prendre en compte la valeur left*/
+    }
+    .icone-change{
+        left : 20px;
+    }
+    .article{
+        margin-top: 2rem;
+    }
+    .testimony-form{
+        margin-top:100px;
+    }
+   
+  
+    
