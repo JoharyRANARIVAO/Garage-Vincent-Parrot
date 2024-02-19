@@ -99,8 +99,15 @@ if(isset($_FILES['car_image']) && $_FILES['car_image']['error'] === UPLOAD_ERR_O
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Véhicules - Modification de Véhicule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Site de Véhicules - Modification de Véhicule</title>
+    
 </head>
 <body class="d-flex flex-column min-vh-100">
     <div class="container">
@@ -120,5 +127,30 @@ if(isset($_FILES['car_image']) && $_FILES['car_image']['error'] === UPLOAD_ERR_O
     <?php require_once(__DIR__ . '/footer.php'); ?>
     <script src="./assets/bootstrap.min.js"></script>
     <script src="./js/bold-and-dark.js"></script>
-</body>
+    <?php
+// Assurez-vous que la connexion à la base de données est établie
+require_once(__DIR__.'/config/mysql.php');
+require_once(__DIR__.'/databaseconnect.php');
+
+// Récupérez les horaires depuis la base de données
+$query = "SELECT day_of_week, opening_time, closing_time FROM opening_hours";
+$statement = $mysqlClient->prepare($query);
+$statement->execute();
+$openingHours = $statement->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<script>
+    // Utilisez les horaires récupérés pour générer le contenu HTML dans le footer
+    let openingHoursList = document.getElementById('openingHoursList');
+    let title = document.createElement('h4');
+    title.textContent = "Nos horaires d'ouverture";
+    title.classList.add('text-success', 'mb-3'); // Ajout de classes pour le style
+    openingHoursList.appendChild(title);
+    <?php foreach ($openingHours as $hour) : ?>
+        var listItem = document.createElement('li');
+        listItem.textContent = "<?php echo $hour['day_of_week'] ?>: <?php echo $hour['opening_time'] ?> - <?php echo $hour['closing_time'] ?>";
+        listItem.classList.add('list-group-item');
+        openingHoursList.appendChild(listItem);
+    <?php endforeach; ?>
+</script>
 </html>
