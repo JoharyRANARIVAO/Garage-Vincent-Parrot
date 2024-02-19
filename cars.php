@@ -16,10 +16,11 @@ require_once(__DIR__.'/functions.php');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/filter.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100 position-relative">
     
@@ -36,6 +37,24 @@ require_once(__DIR__.'/functions.php');
             <div class="btnDark">
             </div>
         </div>
+    </div>
+    <h2 class="bg-primary">Filtrer les voitures d'occasion</h2>
+    
+    <div id="filters" class="bg-light">
+        <label for="price">Prix maximum :</label>
+        <input type="number" id="price" name="price" min="0"><br><br>
+        
+        <label for="mileage">Kilométrage maximum :</label>
+        <input type="number" id="mileage" name="mileage" min="0"><br><br>
+        
+        <label for="year">Année de mise en circulation minimum:</label>
+        <input type="number" id="year" name="year" min="1900"><br><br>
+        
+        <button id="applyFilters">Appliquer les filtres</button>
+    </div>
+
+    <div id="results">
+        <!-- Les résultats seront affichés ici -->
     </div>
     <div class="article">
     <div class="container mt-5">
@@ -84,6 +103,8 @@ require_once(__DIR__.'/functions.php');
 <script src="./assets/bootstrap.min.js"></script>
 <script src="./js/bold-and-dark.js"></script>
 <script src="./scripts/script.js"></script>
+
+
 <?php
 // Assurez-vous que la connexion à la base de données est établie
 require_once(__DIR__.'/config/mysql.php');

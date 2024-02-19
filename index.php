@@ -33,7 +33,7 @@ require_once(__DIR__.'/functions.php');
 </div>
 <div class="banniere">
         <div class="banniere-titre">
-            <h4>Mode sombre</h1>
+            <h4>Mode sombre</h4>
         </div>
         <div class="switch-box">
             <i class="fas fa-moon"></i>
@@ -76,7 +76,7 @@ require_once(__DIR__.'/functions.php');
 </div>
 </div>
 
-<h2 class="pt-3 mt-5  text-center">Voici quelques témoignages de nos clients</h2>
+<h2 class="pt-3 mt-5  text-center">Voici quelques témoignages de nos clients </h2>
 <?php require_once(__DIR__.'/testimonials.php'); ?>
 
 

@@ -1,4 +1,4 @@
-console.log('connecté'); 
+
 
 // Je sélectionne et je stocke
 // la DIV switch-box
@@ -14,20 +14,16 @@ console.log(icone);
 const body= document.querySelector('body'); 
 console.log(body); 
 // le titre
-const titre = document.querySelector('h1'); 
+const titre = document.querySelector('h4'); 
 console.log(titre); 
+
 
 
 // Je soumets la DIV switch à une action au clic
 switchBox.addEventListener('click', function(){
     console.log('DIV cliquée !'); 
 
-    // Je déplace le cercle
-    //btn.style.left = "60px";
-
-
-    // J'utilise .classList.toggle
-    // classList.toggle() permet d'alterner une classe
+   
     btnDark.classList.toggle('btnDark-change'); 
     // Je déplace l'icône
     icone.classList.toggle('icone-change'); 
@@ -46,3 +42,4 @@ switchBox.addEventListener('click', function(){
     }
 
 }); 
+
