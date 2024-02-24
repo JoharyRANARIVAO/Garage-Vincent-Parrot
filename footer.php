@@ -8,7 +8,7 @@
         </div>
         <div class="location">
         <img src="./assets/img/location.png" alt="location" style="width: 20px; height: 20px;">
-        <p>Adresse: 1 Rue de la République, 37350 Tours</p>
+        <p>Adresse: 1 Rue de la République, 37100 Tours</p>
         </div>
         <ul id="openingHoursList">
             <!-- Les horaires seront affichés ici -->
